@@ -32,7 +32,7 @@ const Hero = () => {
           {/* Left side - Information */}
           <div className="flex-1 space-y-6 animate-fade-in">
             <div className="inline-block">
-              <span className="text-primary font-medium text-lg">Good day! 👋</span>
+              <span className="text-primary font-medium text-2xl">Good day! 👋</span>
             </div>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
