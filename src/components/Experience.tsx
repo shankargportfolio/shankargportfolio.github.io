@@ -1,4 +1,4 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Briefcase, Calendar } from "lucide-react";
 
 const experiences = [
@@ -35,34 +35,32 @@ const Experience = () => {
           </p>
         </div>
         
-        <div className="max-w-4xl mx-auto space-y-6">
+        <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {experiences.map((exp, index) => (
             <Card
               key={index}
-              className="hover-lift hover:shadow-lg transition-all duration-300 border-l-4 border-primary group"
+              className="hover-lift hover:shadow-lg transition-all duration-300 border-t-4 border-primary group"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <CardHeader>
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
-                  <div className="flex items-start gap-3">
-                    <div className="p-2 rounded-lg bg-primary/10 group-hover:bg-primary transition-colors mt-1">
-                      <Briefcase className="h-5 w-5 text-primary group-hover:text-primary-foreground transition-colors" />
-                    </div>
-                    <div>
-                      <CardTitle className="text-xl">{exp.title}</CardTitle>
-                      <p className="text-primary font-semibold mt-1">{exp.company}</p>
-                    </div>
+                <div className="flex items-start gap-3 mb-3">
+                  <div className="p-2 rounded-lg bg-primary/10 group-hover:bg-primary transition-colors">
+                    <Briefcase className="h-5 w-5 text-primary group-hover:text-primary-foreground transition-colors" />
                   </div>
-                  <div className="flex items-center gap-2 text-muted-foreground md:ml-auto">
-                    <Calendar className="h-4 w-4" />
-                    <span className="text-sm font-medium whitespace-nowrap">{exp.period}</span>
+                  <div className="flex-1">
+                    <CardTitle className="text-lg mb-1">{exp.title}</CardTitle>
+                    <p className="text-primary font-semibold text-sm">{exp.company}</p>
                   </div>
+                </div>
+                <div className="flex items-center gap-2 text-muted-foreground">
+                  <Calendar className="h-4 w-4" />
+                  <span className="text-sm font-medium">{exp.period}</span>
                 </div>
               </CardHeader>
               <CardContent>
-                <CardDescription className="text-base leading-relaxed">
+                <p className="text-sm text-muted-foreground leading-relaxed">
                   {exp.description}
-                </CardDescription>
+                </p>
               </CardContent>
             </Card>
           ))}
