@@ -86,8 +86,7 @@ const Skills = () => {
                   {category.skills.map((skill) => (
                     <Badge
                       key={skill}
-                      variant="secondary"
-                      className="px-4 py-2 text-sm font-medium bg-muted hover:bg-primary hover:text-primary-foreground transition-colors cursor-default"
+                      className="px-4 py-2 text-sm font-medium bg-primary/90 text-primary-foreground hover:bg-primary transition-colors cursor-default"
                     >
                       {skill}
                     </Badge>
