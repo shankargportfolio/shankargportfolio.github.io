@@ -1,5 +1,5 @@
 import { Button } from "./ui/button";
-import { Linkedin } from "lucide-react";
+import { Linkedin, Download } from "lucide-react";
 import profilePhoto from "@/assets/profile-photo.jpg";
 
 const Hero = () => {
@@ -12,9 +12,20 @@ const Hero = () => {
 
   return (
     <section id="home" className="min-h-screen flex items-center section-padding relative overflow-hidden">
-      {/* Geometric shapes background */}
-      <div className="absolute top-20 right-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-20 left-10 w-96 h-96 bg-secondary/10 rounded-full blur-3xl" />
+      {/* Abstract minimal background pattern */}
+      <div className="absolute inset-0 opacity-40">
+        <div className="absolute top-20 right-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-32 left-20 w-80 h-80 bg-secondary/5 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/3 w-48 h-48 bg-accent/5 rounded-full blur-2xl" />
+        <svg className="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+              <circle cx="20" cy="20" r="1" fill="currentColor" className="text-primary/10" />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#grid)" />
+        </svg>
+      </div>
       
       <div className="container mx-auto relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -28,8 +39,8 @@ const Hero = () => {
               I am <span className="text-primary">Shankar</span>
             </h1>
             
-            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl">
-              With <span className="font-semibold text-foreground">9.8+ years of experience</span>, I enable organizations to build products that solve real problems and deliver measurable business impact.
+            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl font-bold">
+              With <span className="font-bold text-foreground">9.8+ years of experience</span>, I enable organizations to build products that solve real problems and deliver measurable business impact.
             </p>
             
             <div className="flex flex-wrap gap-4 pt-4">
@@ -51,6 +62,18 @@ const Hero = () => {
                 className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
               >
                 View My Work
+              </Button>
+
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                asChild
+              >
+                <a href="https://drive.google.com/file/d/16GVc1C5vG7lxUMPP47F_OGYkwI0UtV-5/view" target="_blank" rel="noopener noreferrer">
+                  <Download className="mr-2 h-5 w-5" />
+                  Download Resume
+                </a>
               </Button>
             </div>
             

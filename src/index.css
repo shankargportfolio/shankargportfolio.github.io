@@ -8,7 +8,7 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    --background: 0 0% 96%;
     --foreground: 222 47% 11%;
 
     --card: 0 0% 100%;
@@ -17,35 +17,35 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 222 47% 11%;
 
-    --primary: 174 72% 46%;
+    --primary: 270 60% 45%;
     --primary-foreground: 0 0% 100%;
     
-    --primary-light: 174 72% 56%;
-    --primary-dark: 174 72% 36%;
+    --primary-light: 270 60% 55%;
+    --primary-dark: 270 60% 35%;
 
     --secondary: 346 77% 60%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 40% 96%;
+    --muted: 210 40% 94%;
     --muted-foreground: 215 16% 47%;
 
-    --accent: 174 72% 46%;
+    --accent: 270 60% 45%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 174 72% 46%;
+    --border: 214 32% 88%;
+    --input: 214 32% 88%;
+    --ring: 270 60% 45%;
 
     --radius: 0.75rem;
     
     /* Custom tokens */
-    --gradient-primary: linear-gradient(135deg, hsl(174 72% 46%) 0%, hsl(174 72% 56%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(270 60% 45%) 0%, hsl(270 60% 55%) 100%);
     --gradient-accent: linear-gradient(135deg, hsl(346 77% 60%) 0%, hsl(346 77% 70%) 100%);
-    --shadow-soft: 0 4px 20px hsla(174 72% 46% / 0.1);
-    --shadow-medium: 0 8px 30px hsla(174 72% 46% / 0.15);
+    --shadow-soft: 0 4px 20px hsla(270 60% 45% / 0.1);
+    --shadow-medium: 0 8px 30px hsla(270 60% 45% / 0.15);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     --sidebar-background: 0 0% 98%;
