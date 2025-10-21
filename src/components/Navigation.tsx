@@ -56,13 +56,6 @@ const Navigation = () => {
             >
               Experience
             </button>
-            <Button
-              onClick={() => scrollToSection("resume")}
-              variant="outline"
-              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
-            >
-              Resume
-            </Button>
           </div>
         </div>
       </div>
