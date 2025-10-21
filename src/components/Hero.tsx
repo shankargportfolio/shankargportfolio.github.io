@@ -45,7 +45,7 @@ const Hero = () => {
               With <span className="font-bold text-foreground">9.8+ years of experience</span>, I enable organizations to build products that solve real problems and deliver measurable business impact.
             </p>
             
-            <div className="flex flex-wrap gap-4 pt-4">
+            <div className="flex gap-4 pt-4">
               <Button
                 size="lg"
                 className="bg-primary hover:bg-primary-dark text-primary-foreground"
@@ -57,28 +57,26 @@ const Hero = () => {
                 </a>
               </Button>
               
-              <div className="flex gap-4">
-                <Button
-                  size="lg"
-                  variant="outline"
-                  onClick={scrollToProjects}
-                  className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
-                >
-                  View My Work
-                </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                onClick={scrollToProjects}
+                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+              >
+                View My Work
+              </Button>
 
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
-                  asChild
-                >
-                  <a href="https://drive.google.com/file/d/16GVc1C5vG7lxUMPP47F_OGYkwI0UtV-5/view" target="_blank" rel="noopener noreferrer">
-                    <Download className="mr-2 h-5 w-5" />
-                    Download Resume
-                  </a>
-                </Button>
-              </div>
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                asChild
+              >
+                <a href="https://drive.google.com/file/d/16GVc1C5vG7lxUMPP47F_OGYkwI0UtV-5/view" target="_blank" rel="noopener noreferrer">
+                  <Download className="mr-2 h-5 w-5" />
+                  Download Resume
+                </a>
+              </Button>
             </div>
             
             <div className="pt-8">
