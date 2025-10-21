@@ -57,26 +57,28 @@ const Hero = () => {
                 </a>
               </Button>
               
-              <Button
-                size="lg"
-                variant="outline"
-                onClick={scrollToProjects}
-                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
-              >
-                View My Work
-              </Button>
+              <div className="flex gap-4">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  onClick={scrollToProjects}
+                  className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                >
+                  View My Work
+                </Button>
 
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
-                asChild
-              >
-                <a href="https://drive.google.com/file/d/16GVc1C5vG7lxUMPP47F_OGYkwI0UtV-5/view" target="_blank" rel="noopener noreferrer">
-                  <Download className="mr-2 h-5 w-5" />
-                  Download Resume
-                </a>
-              </Button>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                  asChild
+                >
+                  <a href="https://drive.google.com/file/d/16GVc1C5vG7lxUMPP47F_OGYkwI0UtV-5/view" target="_blank" rel="noopener noreferrer">
+                    <Download className="mr-2 h-5 w-5" />
+                    Download Resume
+                  </a>
+                </Button>
+              </div>
             </div>
             
             <div className="pt-8">
