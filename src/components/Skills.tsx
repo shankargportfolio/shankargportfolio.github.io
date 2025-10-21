@@ -1,8 +1,10 @@
 import { Badge } from "./ui/badge";
+import { Target, TrendingUp, Zap, Wrench } from "lucide-react";
 
 const skillCategories = [
   {
     category: "Product Management",
+    icon: Target,
     skills: [
       "Product Lifecycle Management",
       "Product Strategy",
@@ -14,6 +16,7 @@ const skillCategories = [
   },
   {
     category: "Business & Strategy",
+    icon: TrendingUp,
     skills: [
       "User Research",
       "Market Sizing",
@@ -25,6 +28,7 @@ const skillCategories = [
   },
   {
     category: "Agile & Delivery",
+    icon: Zap,
     skills: [
       "Agile Sprint Planning",
       "Product Backlog",
@@ -36,6 +40,7 @@ const skillCategories = [
   },
   {
     category: "Technical & Tools",
+    icon: Wrench,
     skills: [
       "SaaS Product Delivery",
       "UI/UX Design",
@@ -61,28 +66,36 @@ const Skills = () => {
         </div>
         
         <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-          {skillCategories.map((category, categoryIndex) => (
-            <div
-              key={category.category}
-              className="space-y-4 animate-fade-in"
-              style={{ animationDelay: `${categoryIndex * 0.1}s` }}
-            >
-              <h3 className="text-xl font-semibold text-foreground border-l-4 border-primary pl-4">
-                {category.category}
-              </h3>
-              <div className="flex flex-wrap gap-2">
-                {category.skills.map((skill) => (
-                  <Badge
-                    key={skill}
-                    variant="secondary"
-                    className="px-4 py-2 text-sm font-medium bg-muted hover:bg-primary hover:text-primary-foreground transition-colors cursor-default"
-                  >
-                    {skill}
-                  </Badge>
-                ))}
+          {skillCategories.map((category, categoryIndex) => {
+            const IconComponent = category.icon;
+            return (
+              <div
+                key={category.category}
+                className="bg-card border border-border rounded-xl p-6 space-y-4 animate-fade-in hover:shadow-lg transition-shadow"
+                style={{ animationDelay: `${categoryIndex * 0.1}s` }}
+              >
+                <div className="flex items-center gap-3">
+                  <div className="p-3 bg-primary/10 rounded-lg">
+                    <IconComponent className="w-6 h-6 text-primary" strokeWidth={2.5} />
+                  </div>
+                  <h3 className="text-xl font-semibold text-foreground">
+                    {category.category}
+                  </h3>
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  {category.skills.map((skill) => (
+                    <Badge
+                      key={skill}
+                      variant="secondary"
+                      className="px-4 py-2 text-sm font-medium bg-muted hover:bg-primary hover:text-primary-foreground transition-colors cursor-default"
+                    >
+                      {skill}
+                    </Badge>
+                  ))}
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
