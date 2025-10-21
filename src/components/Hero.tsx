@@ -28,8 +28,9 @@ const Hero = () => {
       </div>
       
       <div className="container mx-auto relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6 animate-fade-in">
+        <div className="flex items-start gap-8">
+          {/* Left side - Information */}
+          <div className="flex-1 space-y-6 animate-fade-in">
             <div className="inline-block">
               <span className="text-primary font-medium text-lg">Good day! 👋</span>
             </div>
@@ -92,27 +93,21 @@ const Hero = () => {
             </div>
           </div>
           
-          <div className="relative lg:justify-self-end animate-fade-in" style={{ animationDelay: "0.2s" }}>
-            <div className="relative w-full max-w-md mx-auto">
-              {/* Decorative elements */}
-              <div className="absolute -top-6 -right-6 w-32 h-32 gradient-accent rounded-2xl rotate-12 opacity-20" />
-              <div className="absolute -bottom-6 -left-6 w-40 h-40 gradient-primary rounded-2xl -rotate-12 opacity-20" />
-              
-              {/* Profile photo */}
-              <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl">
-                <img
-                  src={profilePhoto}
-                  alt="Shankar G - Product Manager"
-                  className="w-full h-auto object-cover"
-                />
-              </div>
-              
-              {/* Stats badge */}
-              <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-background rounded-2xl shadow-lg p-4 border border-border z-20">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-primary">9.8+</div>
-                  <div className="text-sm text-muted-foreground">Years Experience</div>
-                </div>
+          {/* Right side - Photo in corner */}
+          <div className="relative w-64 lg:w-80 shrink-0 animate-fade-in" style={{ animationDelay: "0.2s" }}>
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-primary/20">
+              <img
+                src={profilePhoto}
+                alt="Shankar G - Product Manager"
+                className="w-full h-auto object-cover"
+              />
+            </div>
+            
+            {/* Minimal badge */}
+            <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-card rounded-xl shadow-lg px-4 py-2 border border-border">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-primary">9.8+</div>
+                <div className="text-xs text-muted-foreground whitespace-nowrap">Years Experience</div>
               </div>
             </div>
           </div>
