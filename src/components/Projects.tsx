@@ -1,34 +1,35 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import { Button } from "./ui/button";
 import { FileText, BookOpen, Layout, ExternalLink } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const projects = [
   {
     icon: FileText,
     title: "PRD for Lab Instruments Calibration",
     description: "Lab instruments require regular calibration for accurate results. Labs currently rely on manual tracking or spreadsheets, leading to missed events or non-compliance. The Auto-Calibrate Workflow Tracker will automate this process and integrate with internal systems.",
-    link: "https://docs.google.com/document/d/1Nz_kAOxUiQtE9_Bc_q-MImY8qO-3YiSVCfppIpGsW3I/edit?usp=sharing",
+    link: "/project/prd-lab-instruments",
     type: "PRD",
   },
   {
     icon: BookOpen,
     title: "Market Size of Smart Home Solutions in India",
     description: "Analyzed market potential, target customer segments, and key product features for Space Tech Innovators Inc. to diversify into the smart home solutions market in India.",
-    link: "https://docs.google.com/document/d/1M1pbhNdAEQ-CvOPWaMLjcBZS3xp2hJJvM1b8IIdtPIM/edit?usp=sharing",
+    link: "/project/market-size-smart-home",
     type: "Case Study",
   },
   {
     icon: BookOpen,
     title: "Transforming Customer Support into a Proactive Growth Engine",
     description: "Automated manual support ticket handling of 10,000 daily emails, improving tagging consistency and reducing user frustration caused by robotic responses.",
-    link: "https://docs.google.com/document/d/1Ib9o7gDKNUY9OxUBwXIdClMOJe53b_DXBNDxgWNtB2E/edit?usp=sharing",
+    link: "/project/customer-support",
     type: "Case Study",
   },
   {
     icon: Layout,
     title: "Marketplace for Cloud Services Catalog",
     description: "Wireframe showcasing a cloud product marketplace for purchasing cloud service blueprints. Includes 2 versions and cart design for checkout.",
-    link: "https://www.figma.com/design/V0lxSH2x9llCFoiSILjwDD/Wire-frame---Marketplace-for-cloud-services?node-id=0-1&t=Fhd5Ju08QaJwfXPa-1",
+    link: "/project/marketplace-wireframe",
     type: "Wireframe",
   },
 ];
@@ -75,10 +76,10 @@ const Projects = () => {
                     className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground group-hover:shadow-md"
                     asChild
                   >
-                    <a href={project.link} target="_blank" rel="noopener noreferrer">
+                    <Link to={project.link}>
                       View {project.type}
                       <ExternalLink className="ml-2 h-4 w-4" />
-                    </a>
+                    </Link>
                   </Button>
                 </CardContent>
               </Card>
