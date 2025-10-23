@@ -1,12 +1,6 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, ChevronLeft, ChevronRight } from "lucide-react";
-import { useState } from "react";
-import { Document, Page, pdfjs } from "react-pdf";
-import "react-pdf/dist/esm/Page/AnnotationLayer.css";
-import "react-pdf/dist/esm/Page/TextLayer.css";
-
-pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
+import { ArrowLeft, Download } from "lucide-react";
 
 const projectFiles: Record<string, { title: string; file: string }> = {
   "prd-lab-instruments": {
@@ -31,12 +25,6 @@ const ProjectViewer = () => {
   const { projectId } = useParams<{ projectId: string }>();
   const navigate = useNavigate();
   const project = projectId ? projectFiles[projectId] : null;
-  const [numPages, setNumPages] = useState<number>(0);
-  const [pageNumber, setPageNumber] = useState<number>(1);
-
-  const onDocumentLoadSuccess = ({ numPages }: { numPages: number }) => {
-    setNumPages(numPages);
-  };
 
   if (!project) {
     return (
@@ -68,45 +56,38 @@ const ProjectViewer = () => {
             </Button>
             <h1 className="text-lg font-semibold text-foreground">{project.title}</h1>
           </div>
-          {numPages > 0 && (
-            <div className="flex items-center gap-2">
-              <Button
-                variant="outline"
-                size="sm"
-                onClick={() => setPageNumber((prev) => Math.max(1, prev - 1))}
-                disabled={pageNumber <= 1}
-              >
-                <ChevronLeft className="h-4 w-4" />
-              </Button>
-              <span className="text-sm text-muted-foreground">
-                Page {pageNumber} of {numPages}
-              </span>
-              <Button
-                variant="outline"
-                size="sm"
-                onClick={() => setPageNumber((prev) => Math.min(numPages, prev + 1))}
-                disabled={pageNumber >= numPages}
-              >
-                <ChevronRight className="h-4 w-4" />
-              </Button>
-            </div>
-          )}
+          <Button
+            variant="outline"
+            size="sm"
+            asChild
+          >
+            <a href={project.file} download className="gap-2">
+              <Download className="h-4 w-4" />
+              Download
+            </a>
+          </Button>
         </div>
       </div>
-      <div className="flex-1 p-4 overflow-auto flex justify-center bg-muted/20">
-        <Document
-          file={project.file}
-          onLoadSuccess={onDocumentLoadSuccess}
-          className="max-w-5xl"
+      <div className="flex-1 bg-muted/20">
+        <object
+          data={project.file}
+          type="application/pdf"
+          className="w-full h-full min-h-[calc(100vh-5rem)]"
+          aria-label={project.title}
         >
-          <Page
-            pageNumber={pageNumber}
-            renderTextLayer={true}
-            renderAnnotationLayer={true}
-            className="shadow-lg"
-            width={Math.min(1200, window.innerWidth - 100)}
-          />
-        </Document>
+          <div className="flex items-center justify-center h-full p-8">
+            <div className="text-center">
+              <p className="text-muted-foreground mb-4">
+                Unable to display PDF. Please download to view.
+              </p>
+              <Button asChild>
+                <a href={project.file} download>
+                  Download PDF
+                </a>
+              </Button>
+            </div>
+          </div>
+        </object>
       </div>
     </div>
   );
