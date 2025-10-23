@@ -1,6 +1,6 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Download } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 
 const projectFiles: Record<string, { title: string; file: string }> = {
   "prd-lab-instruments": {
@@ -43,29 +43,17 @@ const ProjectViewer = () => {
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <div className="border-b bg-card">
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-4">
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={() => navigate("/")}
-              className="gap-2"
-            >
-              <ArrowLeft className="h-4 w-4" />
-              Back
-            </Button>
-            <h1 className="text-lg font-semibold text-foreground">{project.title}</h1>
-          </div>
+        <div className="container mx-auto px-4 py-4 flex items-center gap-4">
           <Button
-            variant="outline"
+            variant="ghost"
             size="sm"
-            asChild
+            onClick={() => navigate("/")}
+            className="gap-2"
           >
-            <a href={project.file} download className="gap-2">
-              <Download className="h-4 w-4" />
-              Download
-            </a>
+            <ArrowLeft className="h-4 w-4" />
+            Back
           </Button>
+          <h1 className="text-lg font-semibold text-foreground">{project.title}</h1>
         </div>
       </div>
       <div className="flex-1 bg-muted/20">
@@ -77,14 +65,9 @@ const ProjectViewer = () => {
         >
           <div className="flex items-center justify-center h-full p-8">
             <div className="text-center">
-              <p className="text-muted-foreground mb-4">
-                Unable to display PDF. Please download to view.
+              <p className="text-muted-foreground">
+                Unable to display PDF in this browser.
               </p>
-              <Button asChild>
-                <a href={project.file} download>
-                  Download PDF
-                </a>
-              </Button>
             </div>
           </div>
         </object>
