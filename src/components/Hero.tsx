@@ -72,7 +72,7 @@ const Hero = () => {
                 className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
                 asChild
               >
-                <a href="https://drive.google.com/file/d/16GVc1C5vG7lxUMPP47F_OGYkwI0UtV-5/view" target="_blank" rel="noopener noreferrer">
+                <a href="/Shankar_Product_Manager_Resume.pdf" download="Shankar_Product_Manager_Resume.pdf">
                   <Download className="mr-2 h-5 w-5" />
                   Download Resume
                 </a>
