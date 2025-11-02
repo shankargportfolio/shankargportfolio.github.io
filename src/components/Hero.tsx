@@ -1,6 +1,7 @@
 import { Button } from "./ui/button";
 import { Linkedin, Download } from "lucide-react";
 import profilePhoto from "@/assets/profile-photo.jpg";
+import resumePdf from "@/assets/Shankar_Product_Manager_Resume.pdf";
 
 const Hero = () => {
   const scrollToProjects = () => {
@@ -72,7 +73,7 @@ const Hero = () => {
                 className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
                 asChild
               >
-                <a href="/Shankar_Product_Manager_Resume.pdf" download="Shankar_Product_Manager_Resume.pdf">
+                <a href={resumePdf} download="Shankar_Product_Manager_Resume.pdf">
                   <Download className="mr-2 h-5 w-5" />
                   Download Resume
                 </a>
