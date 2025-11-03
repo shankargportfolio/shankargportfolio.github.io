@@ -46,7 +46,7 @@ const Education = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent" />
               </div>
-              <CardHeader className="relative -mt-8 z-10">
+              <CardHeader className="relative -mt-6 z-10">
                 <div className="flex items-start gap-4">
                   <div className="p-3 rounded-xl bg-primary shadow-lg">
                     <GraduationCap className="h-6 w-6 text-primary-foreground" />
