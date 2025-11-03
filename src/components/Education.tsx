@@ -1,16 +1,20 @@
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { GraduationCap } from "lucide-react";
+import vitImage from "@/assets/vit-university.png";
+import scsvmvImage from "@/assets/scsvmv-university.png";
 
 const education = [
   {
     degree: "MBA – Finance & Marketing",
     institution: "VIT University",
     period: "2014 – 2016",
+    image: vitImage,
   },
   {
     degree: "B.E – Mechanical Engineering",
     institution: "SCSVMV University",
     period: "2009 – 2013",
+    image: scsvmvImage,
   },
 ];
 
@@ -27,21 +31,29 @@ const Education = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-5xl mx-auto">
           {education.map((edu, index) => (
             <Card
               key={index}
-              className="hover-lift hover:shadow-lg transition-all duration-300 border-border group"
+              className="hover-lift hover:shadow-lg transition-all duration-300 border-border group overflow-hidden"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <CardHeader>
+              <div className="relative h-48 overflow-hidden">
+                <img 
+                  src={edu.image} 
+                  alt={edu.institution}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent" />
+              </div>
+              <CardHeader className="relative -mt-8 z-10">
                 <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-xl bg-primary/10 group-hover:bg-primary transition-colors">
-                    <GraduationCap className="h-6 w-6 text-primary group-hover:text-primary-foreground transition-colors" />
+                  <div className="p-3 rounded-xl bg-primary shadow-lg">
+                    <GraduationCap className="h-6 w-6 text-primary-foreground" />
                   </div>
                   <div className="flex-1">
-                    <CardTitle className="text-lg mb-2">{edu.degree}</CardTitle>
-                    <p className="text-muted-foreground font-medium">{edu.institution}</p>
+                    <CardTitle className="text-lg mb-2 font-bold">{edu.degree}</CardTitle>
+                    <p className="text-foreground font-bold text-base">{edu.institution}</p>
                   </div>
                 </div>
               </CardHeader>
