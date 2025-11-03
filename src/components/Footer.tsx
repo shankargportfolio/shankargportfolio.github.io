@@ -14,7 +14,7 @@ const Footer = () => {
           
           <div className="flex gap-4">
             <a
-              href="https://www.linkedin.com/in/shankar-ganapathi-4a38a957/"
+              href="https://www.linkedin.com/in/gowri-shankar-g-096b3677/"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 rounded-full bg-background/10 hover:bg-primary transition-colors"

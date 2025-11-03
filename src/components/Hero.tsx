@@ -52,7 +52,7 @@ const Hero = () => {
                 className="bg-primary hover:bg-primary-dark text-primary-foreground"
                 asChild
               >
-                <a href="https://www.linkedin.com/in/shankar-ganapathi-4a38a957/" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/in/gowri-shankar-g-096b3677/" target="_blank" rel="noopener noreferrer">
                   <Linkedin className="mr-2 h-5 w-5" />
                   Connect on LinkedIn
                 </a>
