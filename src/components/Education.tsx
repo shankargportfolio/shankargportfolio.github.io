@@ -42,7 +42,9 @@ const Education = () => {
                 <img 
                   src={edu.image} 
                   alt={edu.institution}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  className={`w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 ${
+                    edu.institution === "SCSVMV University" ? "object-left" : ""
+                  }`}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent" />
               </div>
