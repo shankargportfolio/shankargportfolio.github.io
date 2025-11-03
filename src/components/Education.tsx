@@ -17,7 +17,7 @@ const education = [
 const Education = () => {
   return (
     <section id="education" className="section-padding bg-muted/30">
-      <div className="container mx-auto">
+      <div className="container mx-auto px-4 md:px-8">
         <div className="text-center mb-12 animate-fade-in">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             <span className="text-primary">Education</span>
@@ -27,7 +27,7 @@ const Education = () => {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 max-w-4xl mx-auto">
           {education.map((edu, index) => (
             <Card
               key={index}

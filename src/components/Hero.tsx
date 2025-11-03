@@ -28,25 +28,25 @@ const Hero = () => {
         </svg>
       </div>
       
-      <div className="container mx-auto relative z-10">
-        <div className="flex items-start gap-8">
+      <div className="container mx-auto relative z-10 px-4 md:px-8">
+        <div className="flex flex-col md:flex-row items-start gap-8 md:gap-12">
           {/* Left side - Information */}
-          <div className="flex-1 space-y-6 animate-fade-in">
+          <div className="flex-1 space-y-6 animate-fade-in w-full md:w-auto">
             <div className="inline-block">
               <span className="text-primary font-medium text-2xl">Good day! 👋</span>
             </div>
             
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
               Welcome to my portfolio,
               <br />
               <span className="inline-block mt-3">I am <span className="text-primary">Shankar</span></span>
             </h1>
             
-            <p className="text-lg md:text-xl text-foreground max-w-2xl font-bold">
+            <p className="text-base sm:text-lg md:text-xl text-foreground max-w-2xl font-bold">
               With <span className="font-bold text-foreground">9.8+ years of experience</span>, I enable organizations to build products that solve real problems and deliver measurable business impact.
             </p>
             
-            <div className="flex gap-4 pt-4">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 pt-4">
               <Button
                 size="lg"
                 className="bg-primary hover:bg-primary-dark text-primary-foreground"
@@ -96,7 +96,7 @@ const Hero = () => {
           </div>
           
           {/* Right side - Photo in corner */}
-          <div className="relative w-64 lg:w-80 shrink-0 animate-fade-in" style={{ animationDelay: "0.2s" }}>
+          <div className="relative w-48 sm:w-56 md:w-64 lg:w-80 shrink-0 animate-fade-in mx-auto md:mx-0" style={{ animationDelay: "0.2s" }}>
             <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-primary/20">
               <img
                 src={profilePhoto}

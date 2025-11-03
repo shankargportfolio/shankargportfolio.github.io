@@ -37,7 +37,7 @@ const projects = [
 const Projects = () => {
   return (
     <section id="projects" className="section-padding bg-muted/30">
-      <div className="container mx-auto">
+      <div className="container mx-auto px-4 md:px-8">
         <div className="text-center mb-12 animate-fade-in">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Project <span className="text-primary">Work</span>
@@ -47,7 +47,7 @@ const Projects = () => {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 max-w-6xl mx-auto">
           {projects.map((project, index) => {
             const Icon = project.icon;
             return (
