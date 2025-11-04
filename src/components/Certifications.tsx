@@ -70,7 +70,7 @@ const Certifications = () => {
                       onContextMenu={(e) => e.preventDefault()}
                       draggable={false}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/50 to-transparent" />
                     <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
                       <h3 className="font-bold text-sm mb-1 leading-tight">{cert.title}</h3>
                       <p className="text-xs opacity-90">{cert.issuer}</p>
@@ -79,7 +79,7 @@ const Certifications = () => {
                   </div>
                 </Card>
               </DialogTrigger>
-              <DialogContent className="max-w-4xl w-full p-0 bg-black/95">
+              <DialogContent className="max-w-4xl w-full p-0 bg-primary/95">
                 <div className="relative">
                   <img
                     src={cert.image}
