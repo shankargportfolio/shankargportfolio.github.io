@@ -1,26 +1,34 @@
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Award, CheckCircle2 } from "lucide-react";
+import certPopm from "@/assets/cert-popm.jpg";
+import certScrumMaster from "@/assets/cert-scrum-master.jpg";
+import certAws from "@/assets/cert-aws.jpg";
+import certHarness from "@/assets/cert-harness.jpg";
 
 const certifications = [
   {
     title: "SAFe 6.0 Product Manager/Product Owner",
     issuer: "Scaled Agile",
     year: "2024",
+    image: certPopm,
   },
   {
     title: "SAFe 6.0 Scrum Master",
     issuer: "Scaled Agile",
     year: "2024",
+    image: certScrumMaster,
   },
   {
     title: "AWS Cloud Practitioner",
     issuer: "Amazon Web Services",
     year: "2021",
+    image: certAws,
   },
   {
     title: "Harness Cloud Cost Management",
     issuer: "Harness Cloud",
     year: "2024",
+    image: certHarness,
   },
 ];
 
@@ -41,10 +49,17 @@ const Certifications = () => {
           {certifications.map((cert, index) => (
             <Card
               key={index}
-              className="hover-lift hover:shadow-lg transition-all duration-300 border-border group"
+              className="hover-lift hover:shadow-lg transition-all duration-300 border-border group overflow-hidden"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <CardHeader className="text-center">
+              <div className="relative h-48 overflow-hidden bg-white">
+                <img
+                  src={cert.image}
+                  alt={cert.title}
+                  className="w-full h-full object-contain p-2 transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
+              <CardHeader className="text-center -mt-6 relative z-10">
                 <div className="mx-auto mb-4 p-4 rounded-full bg-primary/10 group-hover:bg-primary transition-colors w-fit">
                   <Award className="h-8 w-8 text-primary group-hover:text-primary-foreground transition-colors" />
                 </div>
