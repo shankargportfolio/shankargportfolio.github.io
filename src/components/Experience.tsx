@@ -55,7 +55,7 @@ const Experience = () => {
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                 />
               </div>
-              <CardHeader className="-mt-6 relative z-10">
+              <CardHeader className="mt-2 relative z-10">
                 <div className="flex items-start gap-3 mb-3">
                   <div className="p-2 rounded-lg bg-primary/10 group-hover:bg-primary transition-colors">
                     <Briefcase className="h-5 w-5 text-primary group-hover:text-primary-foreground transition-colors" />
