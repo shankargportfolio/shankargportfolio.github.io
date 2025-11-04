@@ -1,5 +1,8 @@
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Briefcase, Calendar } from "lucide-react";
+import ustGlobal from "@/assets/ust-global.png";
+import hclTech from "@/assets/hcl-tech.png";
+import indoAutoTech from "@/assets/indo-auto-tech.png";
 
 const experiences = [
   {
@@ -7,18 +10,21 @@ const experiences = [
     company: "UST Global",
     period: "Jan 2020 – Jun 2025",
     description: "Led SaaS and Cloud FinOps product strategy, design, and delivery—driving MVPs, POCs, and customer-centric features that boosted adoption by 35% and achieved 15%+ cost savings. Defined roadmaps, accelerated Agile delivery, and transformed ideas into impactful, scalable products.",
+    image: ustGlobal,
   },
   {
     title: "Business Analyst",
     company: "HCL Tech",
     period: "Jun 2016 – Dec 2019",
     description: "Delivered automation solutions transforming manual processes into scalable workflows, securing stakeholder buy-in through POCs and proposals. Implemented 17+ use cases across sectors, reducing turnaround times by 45% and driving faster ROI.",
+    image: hclTech,
   },
   {
     title: "Graduate Engineer Trainee",
     company: "Indo Auto Tech",
     period: "Sep 2013 – May 2014",
     description: "Supervised and produced automobile spare parts across departments, ensuring quality standards.",
+    image: indoAutoTech,
   },
 ];
 
@@ -39,10 +45,17 @@ const Experience = () => {
           {experiences.map((exp, index) => (
             <Card
               key={index}
-              className="hover-lift hover:shadow-lg transition-all duration-300 border-t-4 border-primary group"
+              className="hover-lift hover:shadow-lg transition-all duration-300 border-t-4 border-primary group overflow-hidden"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <CardHeader>
+              <div className="relative h-48 overflow-hidden">
+                <img
+                  src={exp.image}
+                  alt={exp.company}
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                />
+              </div>
+              <CardHeader className="-mt-6 relative z-10">
                 <div className="flex items-start gap-3 mb-3">
                   <div className="p-2 rounded-lg bg-primary/10 group-hover:bg-primary transition-colors">
                     <Briefcase className="h-5 w-5 text-primary group-hover:text-primary-foreground transition-colors" />
