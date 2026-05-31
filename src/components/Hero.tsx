@@ -43,7 +43,7 @@ const Hero = () => {
             </h1>
             
             <p className="text-base sm:text-lg md:text-xl text-foreground max-w-2xl font-bold">
-              With <span className="font-bold text-foreground">9.8+ years of experience</span>, I enable organizations to build products that solve real problems and deliver measurable business impact.
+              With <span className="font-bold text-foreground">10+ years of experience</span>, I enable organizations to build products that solve real problems and deliver measurable business impact.
             </p>
             
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 pt-4">
