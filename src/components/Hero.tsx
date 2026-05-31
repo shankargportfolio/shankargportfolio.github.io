@@ -108,7 +108,7 @@ const Hero = () => {
             {/* Minimal badge */}
             <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-card rounded-xl shadow-lg px-4 py-2 border border-border">
               <div className="text-center">
-                <div className="text-2xl font-bold text-primary">9.8+</div>
+                <div className="text-2xl font-bold text-primary">10+</div>
                 <div className="text-xs text-muted-foreground whitespace-nowrap">Years Experience</div>
               </div>
             </div>
