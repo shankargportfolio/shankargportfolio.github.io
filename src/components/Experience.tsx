@@ -1,10 +1,18 @@
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Briefcase, Calendar } from "lucide-react";
+import zuperLogo from "@/assets/zuper.jpg";
 import ustGlobal from "@/assets/ust-global.png";
 import hclTech from "@/assets/hcl-tech.png";
 import indoAutoTech from "@/assets/indo-auto-tech.png";
 
 const experiences = [
+  {
+    title: "Senior Product Manager",
+    company: "Zuper",
+    period: "Dec 2025 – Jun 2026",
+    description: "Senior Product Manager with experience building and scaling Field Service Management (FSM) capabilities across Service Orders, Purchasing, and Inventory workflows. Led product strategy, customer discovery, and cross-functional execution to launch high-impact features that improved adoption, operational efficiency, procurement visibility, and enterprise customer outcomes.",
+    image: zuperLogo,
+  },
   {
     title: "Product Manager",
     company: "UST Global",
@@ -41,7 +49,7 @@ const Experience = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto">
           {experiences.map((exp, index) => (
             <Card
               key={index}
