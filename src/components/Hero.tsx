@@ -83,7 +83,7 @@ const Hero = () => {
             <div className="pt-8">
               <p className="text-sm text-muted-foreground mb-2">Product Manager specializing in</p>
               <div className="flex flex-wrap gap-2">
-                {["SaaS", "Cloud FinOps", "Product Strategy", "MVP Delivery"].map((tag) => (
+                {["Field Service Management", "SaaS", "Cloud FinOps", "Product Strategy", "MVP Delivery"].map((tag) => (
                   <span
                     key={tag}
                     className="px-3 py-1 bg-muted text-foreground rounded-full text-sm font-medium"
