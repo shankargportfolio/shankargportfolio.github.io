@@ -1,5 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Briefcase, Calendar } from "lucide-react";
+import zuperLogo from "@/assets/zuper.jpg";
 import ustGlobal from "@/assets/ust-global.png";
 import hclTech from "@/assets/hcl-tech.png";
 import indoAutoTech from "@/assets/indo-auto-tech.png";
