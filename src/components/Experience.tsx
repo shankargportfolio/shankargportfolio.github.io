@@ -7,6 +7,13 @@ import indoAutoTech from "@/assets/indo-auto-tech.png";
 
 const experiences = [
   {
+    title: "Senior Product Manager",
+    company: "Zuper",
+    period: "Dec 2025 – Jun 2026",
+    description: "Senior Product Manager with experience building and scaling Field Service Management (FSM) capabilities across Service Orders, Purchasing, and Inventory workflows. Led product strategy, customer discovery, and cross-functional execution to launch high-impact features that improved adoption, operational efficiency, procurement visibility, and enterprise customer outcomes.",
+    image: zuperLogo,
+  },
+  {
     title: "Product Manager",
     company: "UST Global",
     period: "Jan 2020 – Jun 2025",
